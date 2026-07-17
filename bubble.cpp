@@ -22,3 +22,4 @@ int main(){
     printarr(arr,5);
 
 }
+//time comlexity = O(n^2)
