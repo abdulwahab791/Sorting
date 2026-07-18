@@ -23,3 +23,4 @@ int main(){
     bubblesort(arr,5);
     printarr(arr,5);
 }
+//time complexity =O(n^2)
