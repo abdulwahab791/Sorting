@@ -9,6 +9,12 @@ void bubblesort(int arr[],int n){
         }
     }
 }
+void fromuser(int arr[],int n){
+    cout<<"enter array value"<<endl;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+}
 void printarr(int arr[],int n){
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
@@ -17,9 +23,9 @@ void printarr(int arr[],int n){
 }
 
 int main(){
-    int arr[]={4,1,5,2,3};
+    int arr[5];
+    fromuser(arr,5);
     bubblesort(arr,5);
     printarr(arr,5);
-
 }
 //time comlexity = O(n^2)
