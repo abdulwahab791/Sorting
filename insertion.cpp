@@ -1,14 +1,11 @@
 #include<iostream>
 using namespace std;
-int main()
-{
+int main(){
     int arr[5] = {60, 30, 80, 20, 50};
-    for (int i = 1; i < 5; i++)
-    {
+    for (int i = 1; i < 5; i++){
         int key = arr[i];
         int j = i - 1;
-        while (j >= 0 && arr[j] > key)
-        {
+        while (j >= 0 && arr[j] > key){
             arr[j + 1] = arr[j];
             j--;
         }
