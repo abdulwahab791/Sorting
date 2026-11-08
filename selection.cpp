@@ -1,26 +1,24 @@
 #include<iostream>
 using namespace std;
-void selection(int arr[],int n){
-    for(int i=0;i<n-1;i++){
-        int smallidx=i;
-        for(int j=i+1;j<n;j++){
-            if(arr[j]<arr[smallidx]){
-                smallidx=j;
-            }
+int main()
+{
+    int arr[5] = {500, 200, 800, 100, 400};
+    for (int i = 0; i < 4; i++)
+    {
+        int minIndex = i;
+        for (int j = i + 1; j < 5; j++)
+        {
+            if (arr[j] < arr[minIndex])
+                minIndex = j;
         }
-        swap(arr[i],arr[smallidx]);
+        swap(arr[i],arr[minIndex]);
+        cout << "Pass " << i + 1 << ": ";
+        for (int k = 0; k < 5; k++)
+            cout << arr[k] << " ";
+        cout << endl;
     }
-}
-void printarr(int arr[],int n){
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-}
-
-int main(){
-    int arr[]={4,1,5,2,3};  
-    selection(arr,5);
-    printarr(arr,5);
+    cout << "Lowest Price: " << arr[0] << endl;
+    cout << "Highest Price: " << arr[4] << endl;
+        return 0;
 }
 //time complexity =O(n^2)
