@@ -1,26 +1,26 @@
 #include<iostream>
 using namespace std;
-void insertion(int arr[],int n){
-    for(int i=1;i<n;i++){
-        int curr=arr[i];
-        int prev=i-1;
-        while(prev>= 0 && arr[prev]>curr){
-            arr[prev+1]=arr[prev];
-            prev--;
+int main()
+{
+    int arr[5] = {60, 30, 80, 20, 50};
+    for (int i = 1; i < 5; i++)
+    {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j--;
         }
-        arr[prev+1] = curr;
+        arr[j + 1] = key;
+        cout << "Step " << i << ": ";
+        for (int k = 0; k < 5; k++)
+            cout << arr[k] << " ";
+        cout << endl;
     }
-}
-void printarr(int arr[],int n){
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-}
-
-int main(){
-    int arr[]={4,1,5,2,3};  
-    insertion(arr,5);
-    printarr(arr,5);
+    cout << "Sorted Array: ";
+    for (int i = 0; i < 5; i++)
+        cout << arr[i] << " ";
+    return 0;
 }
 //time complexity =O(n^2)
