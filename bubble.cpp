@@ -8,9 +8,8 @@ int main(){
                swap(arr[j],arr[j+1]);
             }
         }
-        cout << "Pass " << i + 1 << ": ";
         for (int k = 0; k < 6; k++){
-            cout << arr[k] << " ";
+            cout << arr[k] <<" ";
         }
         cout << endl;
     }
